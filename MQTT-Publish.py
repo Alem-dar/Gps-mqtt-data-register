@@ -3,7 +3,7 @@ from time import sleep
 import webbrowser           #import package for opening link in browser
 import sys                  #import system package
 import subprocess
-#import paho.mqtt.client as mqtt
+
 from paho.mqtt import client as mqtt_client
 
 broker ='broker.hivemq.com'
@@ -60,11 +60,11 @@ def publish(client):
     #while True:
     #sleep(1)
     
-    msg = f"messages: {lat_in_degrees, long_in_degrees}"      #{msg_count}"
+    msg = f"messages: {lat_in_degrees, long_in_degrees}"      
     result = client.publish(topic, msg)
     # result: [0, 1]
     status = result[0]
-    print(status)
+    # print(status)
     if status == 0:
         print(f"Send `{msg}` to topic `{topic}`")
     else:
