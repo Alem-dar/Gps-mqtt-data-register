@@ -35,8 +35,7 @@ def on_message(client, userdata, msg):
     print(longitute_str)
     gec = [latitute_str, longitute_str]
     print(gec)
-   # latitute  = float(gecici[1])
-   # longitute = float(gecici[2])
+   
     f.write(latitute_str)
     f.write(",")
     f.write(longitute_str)
